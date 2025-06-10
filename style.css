@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #E0FFE0; /* A light green color to match the general tone */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #A0FFA0; /* A slightly darker green for the header */
+}
+
+h1 {
+    color: #006400; /* Dark green for the title */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    background-color: #008000; /* Dark green background for the sections */
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section:nth-child(even) {
+    flex-direction: row-reverse; /* Alternate image and text for a dynamic layout */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 250px; /* Ensure images don't get too small */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.text-block {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.text-block p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #A0FFA0; /* Match header background */
+    color: #006400; /* Match header text color */
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Stack image and text on smaller screens */
+    }
+
+    section:nth-child(even) {
+        flex-direction: column; /* Keep stacking for even sections too */
+    }
+
+    .image-container {
+        padding: 0; /* Remove padding around image when stacked */
+    }
+}
